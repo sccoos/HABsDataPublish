@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" xmlns:dc="http://purl.org/dc/terms" xml:lang="eng" packageId="edi.426.1" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0  https://nis.lternet.edu/schemas/EML/eml-2.2.0/xsd/eml.xsd" scope="system" system="https://pasta.edirepository.org">
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" xmlns:dc="http://purl.org/dc/terms" xml:lang="eng" packageId="tbd" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0  https://nis.lternet.edu/schemas/EML/eml-2.2.0/xsd/eml.xsd" scope="system" system="https://pasta.edirepository.org">
   <dataset>
     <title>California Harmful Algal Bloom Monitoring and Alert Program Data (Darwin Core Archive format)</title>
     <creator>
@@ -824,7 +824,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/BrennieDev/HABsDataPublish/master/DwC/datapackage/event.csv</url>
+            <url function="download">https://raw.githubusercontent.com/sccoos/HABsDataPublish/master/DwC/datapackage/event.csv</url>
           </online>
         </distribution>
       </physical>
@@ -1114,7 +1114,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/BrennieDev/HABsDataPublish/master/DwC/datapackage/occurrence.csv</url>
+            <url function="download">https://raw.githubusercontent.com/sccoos/HABsDataPublish/master/DwC/datapackage/occurrence.csv</url>
           </online>
         </distribution>
       </physical>
@@ -1373,7 +1373,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/BrennieDev/HABsDataPublish/master/DwC/datapackage/extendedmeasurementorfact.csv</url>
+            <url function="download">https://raw.githubusercontent.com/sccoos/HABsDataPublish/master/DwC/datapackage/extendedmeasurementorfact.csv</url>
           </online>
         </distribution>
       </physical>
@@ -1526,7 +1526,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/BrennieDev/HABsDataPublish/master/DwC/datapackage/meta.xml</url>
+            <url function="download">https://raw.githubusercontent.com/sccoos/HABsDataPublish/master/DwC/datapackage/meta.xml</url>
           </online>
         </distribution>
       </physical>
