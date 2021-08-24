@@ -383,7 +383,7 @@ build_physical <- function(file_name, file_format) {
   physical$dataFormat$externallyDefinedFormat$formatName <- file_format
   physical$distribution$online$url <- list(
     `function` = "download",
-    url = paste("https://raw.githubusercontent.com/BrennieDev/HABsDataPublish/master/DwC/datapackage/", file_name, sep="")
+    url = paste("https://raw.githubusercontent.com/sccoos/HABsDataPublish/master/DwC/datapackage/", file_name, sep="")
   )
 
   return(physical)
