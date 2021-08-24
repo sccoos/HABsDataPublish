@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" xmlns:dc="http://purl.org/dc/terms" xml:lang="eng" packageId="tbd" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0  https://nis.lternet.edu/schemas/EML/eml-2.2.0/xsd/eml.xsd" scope="system" system="https://pasta.edirepository.org">
+  <dataset>
+    <title xml:lang="eng">Harmful Algal Bloom (HAB) data collected from multiple pier stations along the California coast by the Scripps Institution of Oceanography (Darwin Core Archive format)</title>
+    <metadataProvider>
+      <individualName>
+        <givenName>Vicky</givenName>
+        <surName>Rowley</surName>
+      </individualName>
+      <organizationName>University of California, San Diego</organizationName>
+      <positionName>SCCOOS Data Manager</positionName>
+      <electronicMailAddress>vrowley@ucsd.edu</electronicMailAddress>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Clarissa</givenName>
+        <surName>Anderson</surName>
+      </individualName>
+      <organizationName>University of California, San Diego</organizationName>
+      <positionName>Co-PI and SCCOOS Executive Director</positionName>
+      <electronicMailAddress>clrander@ucsd.edu</electronicMailAddress>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Abigail</givenName>
+        <surName>Benson</surName>
+      </individualName>
+      <organizationName>U.S. Geological Survey</organizationName>
+      <positionName>Biologist</positionName>
+      <electronicMailAddress>albenson@usgs.gov</electronicMailAddress>
+      <role>processor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Vicky</givenName>
+        <surName>Rowley</surName>
+      </individualName>
+      <organizationName>University of California, San Diego</organizationName>
+      <positionName>SCCOOS Data Manager</positionName>
+      <electronicMailAddress>vrowley@ucsd.edu</electronicMailAddress>
+      <role>processor</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Ian</givenName>
+        <surName>Brunjes</surName>
+      </individualName>
+      <organizationName>University of California, Santa Barbara</organizationName>
+      <electronicMailAddress>ianbrunjes@ucsb.edu</electronicMailAddress>
+      <role>processor</role>
+    </associatedParty>
+    <language>eng</language>
+    <additionalInfo>
+      <para>marine, harvested by OBIS</para>
+    </additionalInfo>
+    <intellectualRights>
+      <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Coast of California, United States</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-124.629</westBoundingCoordinate>
+          <eastBoundingCoordinate>-116.631</eastBoundingCoordinate>
+          <northBoundingCoordinate>42.033</northBoundingCoordinate>
+          <southBoundingCoordinate>32.25</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+    </coverage>
+    <maintenance>
+      <description>
+        <para/>
+      </description>
+      <maintenanceUpdateFrequency>irregular</maintenanceUpdateFrequency>
+    </maintenance>
+    <publisher>
+      <organizationName>Southern California Coastal Ocean Observing System (SCCOOS)</organizationName>
+      <electronicMailAddress>info@sccoos.org</electronicMailAddress>
+      <onlineUrl>https://sccoos.org/harmful-algal-bloom/</onlineUrl>
+    </publisher>
+    <dataTable id="event.csv">
+      <entityName>event</entityName>
+      <entityDescription>DwC-A Event Table</entityDescription>
+      <annotation>
+        <propertyURI label="is about">http://purl.obolibrary.org/obo/IAO_0000136</propertyURI>
+        <valueURI label="Event">http://rs.tdwg.org/dwc/terms/Event</valueURI>
+      </annotation>
+      <attributeList>
+        <attribute id="event.csv/id">
+          <attributeName>id</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>Row identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Row identifier</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="NA">NA</propertyURI>
+            <valueURI label="NA">NA</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/eventID">
+          <attributeName>eventID</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="eventID">http://rs.tdwg.org/dwc/terms/eventID</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/eventDate">
+          <attributeName>eventDate</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The date-time or interval during which an Event occurred. For occurrences, this is the date-time when the event was recorded. Not suitable for a time in a geological context.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="eventDate">http://rs.tdwg.org/dwc/terms/eventDate</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/geodeticDatum">
+          <attributeName>geodeticDatum</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="geodeticDatum">http://rs.tdwg.org/dwc/terms/geodeticDatum</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/countryCode">
+          <attributeName>countryCode</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The standard code for the country in which the Location occurs.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The standard code for the country in which the Location occurs.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="countryCode">http://rs.tdwg.org/dwc/terms/countryCode</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/eventRemarks">
+          <attributeName>eventRemarks</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>Comments or notes about the Event.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Comments or notes about the Event.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="eventRemarks">http://rs.tdwg.org/dwc/terms/eventRemarks</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/decimalLatitude">
+          <attributeName>decimalLatitude</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="decimalLatitude">http://rs.tdwg.org/dwc/terms/decimalLatitude</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/decimalLongitude">
+          <attributeName>decimalLongitude</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="decimalLongitude">http://rs.tdwg.org/dwc/terms/decimalLongitude</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/locationId">
+          <attributeName>locationId</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>An identifier for the set of location information (data associated with dcterms:Location). May be a global unique identifier or an identifier specific to the data set.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>An identifier for the set of location information (data associated with dcterms:Location). May be a global unique identifier or an identifier specific to the data set.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="locationId">http://rs.tdwg.org/dwc/terms/locationID</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/minimumDepthInMeters">
+          <attributeName>minimumDepthInMeters</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The lesser depth of a range of depth below the local surface, in meters.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="minimumDepthInMeters">http://rs.tdwg.org/dwc/terms/minimumDepthInMeters</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/maximumDepthInMeters">
+          <attributeName>maximumDepthInMeters</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The greater depth of a range of depth below the local surface, in meters.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="maximumDepthInMeters">http://rs.tdwg.org/dwc/terms/maximumDepthInMeters</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="event.csv/coordinateUncertaintyInMeters">
+          <attributeName>coordinateUncertaintyInMeters</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The horizontal distance (in meters) from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location. Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="coordinateUncertaintyInMeters">http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>occurrence</entityName>
+      <entityDescription>DwC-A Occurrence Table</entityDescription>
+      <attributeList>
+        <attribute id="occur.csv/id">
+          <attributeName>id</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>Row identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Row identifier</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="NA">NA</propertyURI>
+            <valueURI label="NA">NA</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/basisOfRecord">
+          <attributeName>basisOfRecord</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The specific nature of the data record.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The specific nature of the data record.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="basisOfRecord">http://rs.tdwg.org/dwc/terms/basisOfRecord</valueURI>
+          </annotation>
+        </attribute>
+                <attribute id="occurrence.csv/organismName">
+          <attributeName>organismName</attributeName>
+          <attributeDefinition>A textual name or label assigned to an Organism instance.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>A textual name or label assigned to an Organism instance.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="organismName">http://rs.tdwg.org/dwc/terms/organismName</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/organismQuantity">
+          <attributeName>organismQuantity</attributeName>
+          <attributeDefinition>A number or enumeration value for the quantity of organisms.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="organismQuantity">http://rs.tdwg.org/dwc/terms/organismQuantity</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/organismQuantityType">
+          <attributeName>organismQuantityType</attributeName>
+          <attributeDefinition>The type of quantification system used for the quantity of organisms.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The type of quantification system used for the quantity of organisms.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="organismQuantityType">http://rs.tdwg.org/dwc/iri/organismQuantityType</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/occurrenceID">
+          <attributeName>occurrenceID</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="occurrenceID">http://rs.tdwg.org/dwc/terms/occurrenceID</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/occurrenceStatus">
+          <attributeName>occurrenceStatus</attributeName>
+          <attributeDefinition>A statement about the presence or absence of a Taxon at a Location.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>A statement about the presence or absence of a Taxon at a Location.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="occurrenceStatus">http://rs.tdwg.org/dwc/terms/occurrenceStatus</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/scientificName">
+          <attributeName>scientificName</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. This term should not contain identification qualifications, which should instead be supplied in the IdentificationQualifier term.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. This term should not contain identification qualifications, which should instead be supplied in the IdentificationQualifier term.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="scientificName">http://rs.tdwg.org/dwc/terms/scientificName</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/scientificNameID">
+          <attributeName>scientificNameID</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>An identifier for the nomenclatural (not taxonomic) details of a scientific name.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>An identifier for the nomenclatural (not taxonomic) details of a scientific name.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="scientificNameID">http://rs.tdwg.org/dwc/terms/scientificNameID</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/taxonID">
+          <attributeName>taxonID</attributeName>
+          <attributeLabel>NA</attributeLabel>
+          <attributeDefinition>An identifier for the set of taxon information (data associated with the Taxon class). May be a global unique identifier or an identifier specific to the data set.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>An identifier for the set of taxon information (data associated with the Taxon class). May be a global unique identifier or an identifier specific to the data set.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="taxonID">http://rs.tdwg.org/dwc/terms/taxonID</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="occurrence.csv/kingdom">
+          <attributeName>kingdom</attributeName>
+          <attributeDefinition>The full scientific name of the kingdom in which the taxon is classified.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The full scientific name of the kingdom in which the taxon is classified.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="kingdom">http://rs.tdwg.org/dwc/terms/kingdom</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="extendedmeasurementorfact.csv">
+      <entityName>extendedmeasurementorfact</entityName>
+      <entityDescription>DwC-A Extended Measurement Or Fact Table</entityDescription>
+      <annotation>
+        <propertyURI label="is about">http://purl.obolibrary.org/obo/IAO_0000136</propertyURI>
+        <valueURI label="MeasurementOrFact">http://rs.tdwg.org/dwc/terms/MeasurementOrFact</valueURI>
+      </annotation>
+      <attributeList>
+        <attribute id="extendedmeasurementorfact.csv/id">
+          <attributeName>id</attributeName>
+          <attributeDefinition>Row identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Row identifier</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute id="extendedmeasurementorfact.csv/measurementID">
+          <attributeName>measurementID</attributeName>
+          <attributeDefinition>An identifier for the MeasurementOrFact (information pertaining to measurements, facts, characteristics, or assertions). May be a global unique identifier or an identifier specific to the data set.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>An identifier for the MeasurementOrFact (information pertaining to measurements, facts, characteristics, or assertions). May be a global unique identifier or an identifier specific to the data set.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="measurementID">http://rs.tdwg.org/dwc/terms/measurementID</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="extendedmeasurementorfact.csv/measurementType">
+          <attributeName>measurementType</attributeName>
+          <attributeDefinition>The nature of the measurement, fact, characteristic, or assertion.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The nature of the measurement, fact, characteristic, or assertion.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="measurementType">http://rs.tdwg.org/dwc/terms/measurementType</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="extendedmeasurementorfact.csv/measurementTypeID">
+          <attributeName>measurementTypeID</attributeName>
+          <attributeDefinition>The identifier of the measurementType as defined by a controlled vocabulary.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The identifier of the measurementType as defined by a controlled vocabulary.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute id="extendedmeasurementorfact.csv/measurementValue">
+          <attributeName>measurementValue</attributeName>
+          <attributeDefinition>The value of the measurement, fact, characteristic, or assertion.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="measurementValue">http://rs.tdwg.org/dwc/terms/measurementValue</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="extendedmeasurementorfact.csv/measurementUnit">
+          <attributeName>measurementUnit</attributeName>
+          <attributeDefinition>The units associated with the measurementValue.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The units associated with the measurementValue.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="measurementUnit">http://rs.tdwg.org/dwc/terms/measurementUnit</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="extendedmeasurementorfact.csv/measurementUnitID">
+          <attributeName>measurementUnitID</attributeName>
+          <attributeDefinition>The identifier of the measurementUnit as defined by a controlled vocabulary.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The identifier of the measurementUnit as defined by a controlled vocabulary.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <otherEntity>
+      <entityName>meta</entityName>
+      <entityDescription>The meta file associated with this dataset</entityDescription>
+      <entityType>unknown</entityType>
+    </otherEntity>
+  </dataset>
+</eml:eml>

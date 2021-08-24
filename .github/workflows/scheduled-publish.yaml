@@ -1,0 +1,105 @@
+on: workflow_dispatch
+#  schedule:
+#    - cron: "0 0 1 * #"
+
+jobs:
+  generate-data:
+    environment: habspublish
+    runs-on: ${{ matrix.config.os }}
+
+    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {os: ubuntu-latest,   r: 'release'}
+
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      RSPM: ${{ matrix.config.rspm }}
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install OS dependencies
+        run: |
+          sudo apt-get install curl
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libjq-dev
+          sudo apt-get install libnetcdf-dev
+
+      - uses: r-lib/actions/setup-r@master
+        with:
+          r-version: ${{ matrix.config.r }}
+          http-user-agent: ${{ matrix.config.http-user-agent }}
+
+      - uses: r-lib/actions/setup-pandoc@master
+
+      - name: Query R dependencies
+        run: |
+          install.packages('httr')
+          install.packages('crul')
+          install.packages('jsonld')
+          install.packages('V8')
+          install.packages('remotes')
+          install.packages('sessioninfo')
+          install.packages('stringr')
+          install.packages('readr')
+          install.packages('googledrive')
+          install.packages('here')
+          install.packages("tibble")
+          install.packages('readxl')
+          install.packages('ncdf4')
+          install.packages('rerddap')
+          install.packages('worrms')
+          install.packages('lubridate')
+          install.packages('reshape2')
+          install.packages('EML')
+          remotes::install_github('EDIorg/EDIutils', update=FALSE, ask=FALSE)
+          remotes::install_github('EDIorg/taxonomyCleanr', update=FALSE, ask=FALSE)
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install R dependencies
+        run: |
+          remotes::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+
+      - name: Generate DwC-A data package
+        run: |
+          source("R/build_DwC_package.R")
+        shell: Rscript {0}
+
+      - name: Commit generated files
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add --all
+          git diff --quiet && git diff --staged --quiet || git commit -am "added generated dataset files"
+          git push
+
+      - name: Publish data to EDI
+        env:
+            EDI_ENV: "staging"
+            EDI_USER: ${{secrets.EDI_USERNAME}}
+            EDI_PASS: ${{secrets.EDI_PASSWORD}}
+        run: |
+          source("R/publish_to_EDI.R")
+        shell: Rscript {0}
+
+      - name: Session info
+        run: |
+          options(width = 100)
+          pkgs <- installed.packages()[, "Package"]
+          sessioninfo::session_info(pkgs, include_base = TRUE)
+        shell: Rscript {0}

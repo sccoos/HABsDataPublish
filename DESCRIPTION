@@ -1,0 +1,33 @@
+Package: HABsDataPublish
+Title: HABs data DwC-A transform and publishing
+Version: 1.0.0
+Authors@R: 
+    person(given = "Ian",
+           family = "Brunjes",
+           role = c("aut", "cre"),
+           email = "ianbrunjes@ucsb.edu")
+Description: Scheduled GitHub Action for propagation of Harmful Algal Blooms (HABs) data from ERDDAP into remote data repositories (EDI).
+License: MIT
+Imports:
+    V8,
+    httr,
+    crul,
+    jsonld,
+    stringr,
+    readr,
+    googledrive,
+    here,
+    tibble,
+    readxl,
+    rerddap,
+    worrms,
+    dplyr,
+    lubridate,
+    reshape2,
+    EML,
+    taxonomyCleanr,
+    EDIutils
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
