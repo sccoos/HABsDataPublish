@@ -193,7 +193,7 @@
       <electronicMailAddress>ianbrunjes@ucsb.edu</electronicMailAddress>
       <role>processor</role>
     </associatedParty>
-    <pubDate>2021-08-24</pubDate>
+    <pubDate>2021-08-31</pubDate>
     <language>eng</language>
     <abstract>
       <para>The Harmful Algal Bloom Monitoring and Alert Program (HABMAP) was formed in 2008 and provides updates on current algal blooms and facilitates information exchange among scientists, federal and state managers, and the general public in California. A major component of this program is regional HAB monitoring with support from the Southern California Coastal Ocean Observing System (SCCOOS) and the Central and Northern California Ocean Observing System (CeNCOOS). Water samples and net tows are collected once per week at piers to monitor for HAB species, the neurotoxin domoic acid, and water quality data including temperature, chlorophyll-a, and nutrients.</para>
@@ -225,7 +225,7 @@
             <calendarDate>2005-06-03</calendarDate>
           </beginDate>
           <endDate>
-            <calendarDate>2021-08-18</calendarDate>
+            <calendarDate>2021-08-23</calendarDate>
           </endDate>
         </rangeOfDates>
       </temporalCoverage>
@@ -816,7 +816,7 @@
       <entityDescription>DwC-A Event Table</entityDescription>
       <physical>
         <objectName>event.csv</objectName>
-        <size unit="bytes">744091</size>
+        <size unit="bytes">747297</size>
         <dataFormat>
           <externallyDefinedFormat>
             <formatName>text/csv</formatName>
@@ -1099,14 +1099,14 @@
           </annotation>
         </attribute>
       </attributeList>
-      <numberOfRecords>4133</numberOfRecords>
+      <numberOfRecords>4151</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>occurrence</entityName>
       <entityDescription>DwC-A Occurrence Table</entityDescription>
       <physical>
         <objectName>occurrence.csv</objectName>
-        <size unit="bytes">8393822</size>
+        <size unit="bytes">8418947</size>
         <dataFormat>
           <externallyDefinedFormat>
             <formatName>text/csv</formatName>
@@ -1358,14 +1358,14 @@
           </annotation>
         </attribute>
       </attributeList>
-      <numberOfRecords>30657</numberOfRecords>
+      <numberOfRecords>30749</numberOfRecords>
     </dataTable>
     <dataTable id="extendedmeasurementorfact.csv">
       <entityName>extendedmeasurementorfact</entityName>
       <entityDescription>DwC-A Extended Measurement Or Fact Table</entityDescription>
       <physical>
         <objectName>extendedmeasurementorfact.csv</objectName>
-        <size unit="bytes">9336718</size>
+        <size unit="bytes">9351688</size>
         <dataFormat>
           <externallyDefinedFormat>
             <formatName>text/csv</formatName>
@@ -1511,7 +1511,7 @@
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>42632</numberOfRecords>
+      <numberOfRecords>42698</numberOfRecords>
     </dataTable>
     <otherEntity>
       <entityName>meta</entityName>
