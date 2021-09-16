@@ -99,7 +99,7 @@ for (i in 1:length(datasetIds)) {
   #' We will also have to add any missing required fields
   siteData$basisOfRecord <- "HumanObservation"
   siteData$geodeticDatum <- "EPSG:4326 WGS84"
-  siteData$countryCode <-
+  siteData$countryCode <- "US"
   siteData$coordinateUncertaintyInMeters <-
     filter(meta_site, Location_Code == siteIds[i])$coordinateUncertaintyInMeters
 
