@@ -1,6 +1,7 @@
-on:
-  schedule:
-    - cron: "0 0 17 * *"
+on: workflow_dispatch
+#on:
+#  schedule:
+#    - cron: "0 0 17 * *"
 
 jobs:
   generate-data:
