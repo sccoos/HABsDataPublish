@@ -49,7 +49,7 @@ tryCatch({
   EDIutils::api_update_data_package(
     path = eml_path,
     package.id = new_doi,
-    environment = "staging",
+    environment = env,
     user.id = usern,
     user.pass = passw,
     affiliation = "EDI"
