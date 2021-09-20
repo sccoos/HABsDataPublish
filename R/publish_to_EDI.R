@@ -40,6 +40,24 @@ new_doi <- paste0("edi.",dataset_id, ".", new_version)
 # Update EML with new DOI
 eml_doc$packageId <- new_doi
 
+# Add EDI specific access
+eml_doc$access <- list(
+  authSystem="https://pasta.lternet.edu/authentication",
+  order="allowFirst",
+  scope="document",
+  system="https://pasta.lternet.edu",
+  allow = list(
+    list(
+      principal = paste0("uid=", usern, ",o=EDI,dc=edirepository,dc=org"),
+      permission = "all"
+    ),
+    list(
+      principal = "public",
+      permission = "read"
+    )
+  )
+)
+
 # Rewrite updated EML file with EDI naming convention
 eml <- EML::write_eml(eml_doc, here("DwC", "datapackage", paste0(new_doi,".xml")))
 
