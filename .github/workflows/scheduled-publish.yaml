@@ -1,7 +1,7 @@
-on:
-  schedule:
-    - cron: "0 0 1 * *"
-# on: workflow_dispatch
+#on:
+#  schedule:
+#    - cron: "0 0 1 * *"
+on: workflow_dispatch
 
 jobs:
   generate-data:
@@ -41,36 +41,14 @@ jobs:
 
       - name: Query R dependencies
         run: |
-          install.packages('httr')
-          install.packages('crul')
-          install.packages('jsonld')
-          install.packages('V8')
           install.packages('remotes')
           install.packages('sessioninfo')
-          install.packages('stringr')
-          install.packages('readr')
-          install.packages('googledrive')
-          install.packages('here')
-          install.packages("tibble")
-          install.packages('readxl')
           install.packages('ncdf4')
-          install.packages('rerddap')
-          install.packages('worrms')
-          install.packages('lubridate')
-          install.packages('reshape2')
-          install.packages('EML')
           remotes::install_github('EDIorg/EDIutils', update=FALSE, ask=FALSE)
           remotes::install_github('EDIorg/taxonomyCleanr', update=FALSE, ask=FALSE)
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
-
-      - name: Cache R packages
-        uses: actions/cache@v1
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
       - name: Install R dependencies
         run: |
