@@ -1,7 +1,7 @@
-#on:
-#  schedule:
-#    - cron: "0 0 1 * *"
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+#on: workflow_dispatch
 
 jobs:
   generate-data:
@@ -29,8 +29,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r@master
         with:
-          r-version: ${{ matrix.config.r }}
-          http-user-agent: ${{ matrix.config.http-user-agent }}
+          r-version: release
 
       - name: Query R dependencies
         run: |
