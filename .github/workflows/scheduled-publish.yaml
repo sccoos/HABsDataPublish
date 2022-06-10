@@ -1,7 +1,7 @@
-on:
-  schedule:
-    - cron: "0 0 1 * *"
-#on: workflow_dispatch
+# on:
+#   schedule:
+#     - cron: "0 0 1 * *"
+on: workflow_dispatch
 
 jobs:
   generate-data:
@@ -54,7 +54,7 @@ jobs:
           install.packages('lubridate')
           install.packages('reshape2')
           install.packages('EML')
-          remotes::install_github('EDIorg/EDIutils', update=FALSE, ask=FALSE)
+          install.packages('EDIutils')
           remotes::install_github('EDIorg/taxonomyCleanr', update=FALSE, ask=FALSE)
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")

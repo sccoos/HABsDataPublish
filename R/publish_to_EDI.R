@@ -27,10 +27,10 @@ identifiers <- read_csv(here("EML", "package_identifiers.csv"))
 dataset_id <- identifiers[[paste0("edi_", env)]]
 
 # Get most recent version of published dataset
-current_version <- api_list_data_package_revisions(
+current_version <- list_data_package_revisions(
   scope = "edi",
   identifier = dataset_id,
-  environment = env,
+  env = env,
   filter = "newest"
 )
 new_version <- as.numeric(current_version) + 1
@@ -64,14 +64,25 @@ eml <- EML::write_eml(eml_doc, here("DwC", "datapackage", paste0(new_doi,".xml")
 ## Publish to EDI using EDIutils
 tryCatch({
   print(paste("Updating data with doi:", new_doi))
-  EDIutils::api_update_data_package(
-    path = eml_path,
-    package.id = new_doi,
-    environment = env,
-    user.id = usern,
-    user.pass = passw,
-    affiliation = "EDI"
+
+  # Authenticate to EDI repository
+  EDIutils::login(userID = usern, userPass = passw)
+
+  transaction <- EDIutils::update_data_package(
+    eml = paste0(eml_path, "/", new_doi),
+    env = env
   )
+
+  status <- EDIutils::check_status_update(transaction, wait = TRUE, env = env)
+
+  if (status) {
+    print(paste0("Updated package ", new_doi, ":"))
+    print(EDIutils::read_data_package_report_summary(new_doi, env = env))
+  }
+
+  EDIutils::logout()
+
+
 }, error=function(ex) {
   print(paste("Update to EDI failed with error: ", ex))
 })
