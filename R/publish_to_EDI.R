@@ -66,7 +66,7 @@ tryCatch({
   print(paste("Updating data with doi:", new_doi))
 
   # Authenticate to EDI repository
-  EDIutils::login(userID = usern, userPass = passw)
+  EDIutils::login(userId = usern, userPass = passw)
 
   transaction <- EDIutils::update_data_package(
     eml = paste0(eml_path, "/", new_doi),
@@ -82,8 +82,8 @@ tryCatch({
 
   EDIutils::logout()
 
-
 }, error=function(ex) {
   print(paste("Update to EDI failed with error: ", ex))
+  EDIutils::logout()
 })
 
