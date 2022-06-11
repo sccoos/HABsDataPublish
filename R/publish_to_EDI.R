@@ -59,7 +59,7 @@ eml_doc$access <- list(
 )
 
 # Rewrite updated EML file with EDI naming convention
-eml <- EML::write_eml(eml_doc, here("DwC", "datapackage", paste0(new_doi,".xml")))
+eml <- EML::write_eml(eml_doc, here(eml_path, paste0(new_doi,".xml")))
 
 ## Publish to EDI using EDIutils
 tryCatch({
@@ -69,7 +69,7 @@ tryCatch({
   EDIutils::login(userId = usern, userPass = passw)
 
   transaction <- EDIutils::update_data_package(
-    eml = paste0(eml_path, "/", new_doi),
+    eml = here(eml_path, paste0(new_doi,".xml")),
     env = env
   )
 
