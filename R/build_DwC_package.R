@@ -38,7 +38,7 @@ if (DEBUG == "TRUE") {
   siteIds = c('SIO')
 }  else {
   datasetIds = c(
-    'HABs-CalPoly',
+    'HABs-CalPolyPier',
     'HABs-MontereyWharf',
     'HABs-NewportPier',
     'HABs-SantaCruzWharf',
