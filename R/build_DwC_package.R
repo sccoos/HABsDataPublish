@@ -13,7 +13,7 @@ library(taxonomyCleanr)
 library(EDIutils)
 
 
-#'
+#'4
 #' Read in spreadsheets that give info about event, measurement and occurrence parameters for this dataset from the downloaded file
 #'
 oldw <- getOption("warn")
@@ -40,7 +40,7 @@ if (DEBUG == "TRUE") {
   datasetIds = c(
     'HABs-CalPolyPier',
     'HABs-MontereyWharf',
-    'HABs-NewportPier',
+    'HABs-NewportBeachPier',
     'HABs-SantaCruzWharf',
     'HABs-SantaMonicaPier',
     'HABs-ScrippsPier',
@@ -87,7 +87,7 @@ for (i in 1:length(datasetIds)) {
       maximumDepthInMeters = siteData$depth,
       stringsAsFactors = FALSE
     )
-  siteData <- na_if(siteData, "NaN")
+  siteData <- siteData %>% mutate(across(where(is.numeric), ~ifelse(is.nan(.), NA, .)))
 
   #' Create the eventID and occurrenceID in the original file so that information
   #' can be reused for all necessary files down the line.
@@ -163,6 +163,7 @@ for (i in 1:length(datasetIds)) {
   mof_long <-
     reshape2::melt(
       data = mof,
+      id.vars = c("eventID"),
       na.rm = TRUE,
       value.factor = FALSE,
       variable.factor = FALSE
@@ -187,10 +188,11 @@ for (i in 1:length(datasetIds)) {
     }
   }
 
-  occur <- siteData[(as.character(dwc_o))]
+  occur <- siteData %>% select(as.character(dwc_o)) #Columns `Ceratium` and `Cochlodinium` don't exist.
   occur_long <-
     reshape2::melt(
       data = occur,
+      id.vars = c("eventID","basisOfRecord"),
       na.rm = TRUE,
       value.factor = FALSE,
       variable.factor = FALSE
